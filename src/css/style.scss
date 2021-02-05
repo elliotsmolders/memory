@@ -1,0 +1,44 @@
+@use "./base/variables" as *;
+@use "./base/reset";
+@use "./base/fonts";
+@use "./base/mixins" as *;
+
+@import "../../icons/style";
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background-color: $pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    width: 100px;
+    height: 200px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    &.flipped {
+      svg {
+        display: none;
+      }
+      background-color: black;
+    }
+    &.correct {
+      background-color: green;
+    }
+  }
+}
